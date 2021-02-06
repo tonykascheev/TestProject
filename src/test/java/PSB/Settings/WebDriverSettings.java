@@ -1,8 +1,10 @@
-package PSB;
+package PSB.Settings;
 
+import PSB.PageDirectory.LoginPage;
+import PSB.PageDirectory.docCreationPage;
+import PSB.PageDirectory.documentsPage;
 import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -11,9 +13,9 @@ import java.util.concurrent.TimeUnit;
 
 public class WebDriverSettings {
     public static LoginPage loginPage;
-    public static DocumentsPage documentsPage;
+    public static PSB.PageDirectory.documentsPage documentsPage;
     public static WebDriver driver;
-    public static DocCreationPage docCreationPage;
+    public static PSB.PageDirectory.docCreationPage docCreationPage;
 
     @Before
     public void setup() {
@@ -22,8 +24,8 @@ public class WebDriverSettings {
         //создание экземпляра драйвера
         driver = new ChromeDriver();
         loginPage = new LoginPage(driver);
-        documentsPage = new DocumentsPage(driver);
-        docCreationPage = new DocCreationPage(driver);
+        documentsPage = new documentsPage(driver);
+        docCreationPage = new docCreationPage(driver);
         //окно разворачивается на полный экран
         driver.manage().window().maximize();
         //задержка на выполнение теста = 10 сек.

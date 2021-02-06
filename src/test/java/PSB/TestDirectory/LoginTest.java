@@ -1,6 +1,8 @@
-package PSB;
+package PSB.TestDirectory;
 
 
+import PSB.Settings.ConfProperties;
+import PSB.Settings.WebDriverSettings;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,10 +18,8 @@ public class LoginTest extends WebDriverSettings {
         //получение доступа к методам класса LoginPage для взаимодействия с элементами страницы
         //значение login/password берутся из файла настроек по аналогии с chromedriver
         //и loginpage
-        System.out.println("ntcn 1");
         loginPage.onPage();
         //вводим логин
-        System.out.println("test 2");
         loginPage.inputLogin(ConfProperties.getProperty("login"));
         //нажимаем кнопку входа
         loginPage.clickLoginBtn();

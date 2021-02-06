@@ -1,4 +1,4 @@
-package PSB;
+package PSB.PageDirectory;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,10 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.assertEquals;
 
-public class DocCreationPage {
+public class docCreationPage {
     public WebDriver driver;
 
-    public DocCreationPage(WebDriver driver) {
+    public docCreationPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
@@ -83,104 +83,104 @@ public class DocCreationPage {
         assertEquals(Title.getText(), "Добавление документа");
     }
 
-    public void GKField(String GK) {
+    public void gkField(String GK) {
         GKField.sendKeys(GK);
         driver.findElement(By.xpath("//li[contains(text(),'" + GK + "')]")).click();
     }
 
-    public void RazdelDField(String RazdelD) {
+    public void razdelDField(String RazdelD) {
         RazdelDField.sendKeys(RazdelD);
         driver.findElement(By.xpath("//li[contains(text(),'" + RazdelD + "')]")).click();
     }
 
-    public void FormDocField(String FormDoc) {
+    public void formDocField(String FormDoc) {
         FormDocField.sendKeys(FormDoc);
         driver.findElement(By.xpath("//li[contains(text(),'" + FormDoc + "')]")).click();
     }
 
-    public void CatalogField(String Catalog) {
+    public void catalogField(String Catalog) {
         CatalogField.sendKeys(Catalog);
         driver.findElement(By.xpath("//span[contains(text(),'" + Catalog + "')]")).click();
     }
 
-    public void ShortTitle(String ShortT) {
+    public void shortTitle(String ShortT) {
         ShortTitle.sendKeys(ShortT);
         driver.findElement(By.xpath("//li[contains(text(),'" + ShortT + "')]")).click();
     }
 
-    public void ClassifGSGO() {
+    public void classifGSGO() {
         ClassifGSGO.click();
     }
 
-    public void ClassifGSReg() {
+    public void classifGSReg() {
         ClassifGSReg.click();
     }
 
-    public void ClassifOPKGO() {
+    public void classifOPKGO() {
         ClassifOPKGO.click();
     }
 
-    public void ClassifOPKReg() {
+    public void classifOPKReg() {
         ClassifOPKReg.click();
     }
 
-    public void Attachment(String filePath) {
+    public void attachment(String filePath) {
         Attachment.sendKeys(filePath);
     }
 
-    public void Name(String docName) {
+    public void name(String docName) {
         Name.sendKeys(docName);
     }
 
-    public void EnableNotifications() {
+    public void enableNotifications() {
         NotificationYes.click();
     }
 
-    public void DocUL() {
+    public void docUL() {
         DocUL.click();
     }
 
-    public void DocGK() {
+    public void docGK() {
         DocGK.click();
     }
 
-    public void Year(String docYear) {
+    public void year(String docYear) {
         Year.sendKeys(docYear);
         driver.findElement(By.xpath("//li[contains(text(),'" + docYear + "')]")).click();
     }
 
-    public void Quarta(String quarta) {
+    public void quarta(String quarta) {
         Quarta.sendKeys(quarta);
         driver.findElement(By.xpath("//li[contains(text(),'" + quarta + "')]")).click();
     }
 
-    public void DocClient() {
+    public void docClient() {
         DocClient.click();
     }
 
-    public void DocBank() {
+    public void docBank() {
         DocBank.click();
     }
 
-    public void Date(String docDate) {
+    public void date(String docDate) {
         Date.sendKeys(docDate);
         driver.findElement(By.xpath("//li[contains(text(),'" + docDate + "')]")).click();
     }
 
-    public void ExpirationDate(String expirationDate) {
+    public void expirationDate(String expirationDate) {
         ExpirationDate.sendKeys(expirationDate);
         driver.findElement(By.xpath("//li[contains(text(),'" + expirationDate + "')]")).click();
     }
 
-    public void VerificationYes() {
+    public void verificationYes() {
         VerificationYes.click();
     }
 
-    public void VerificationNo() {
+    public void verificationNo() {
         VerificationNo.click();
     }
 
-    public void AddButton() {
+    public void addButton() {
         AddButton.click();
     }
 

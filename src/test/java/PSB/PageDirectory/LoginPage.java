@@ -1,4 +1,4 @@
-package PSB;
+package PSB.PageDirectory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

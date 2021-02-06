@@ -1,4 +1,4 @@
-package PSB;
+package PSB.PageDirectory;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,10 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.assertEquals;
 
-public class DocumentsPage {
+public class documentsPage {
     public WebDriver driver;
 
-    public DocumentsPage(WebDriver driver) {
+    public documentsPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }

@@ -1,4 +1,4 @@
-package PSB;
+package PSB.Settings;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
