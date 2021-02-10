@@ -7,9 +7,7 @@ import org.junit.Test;
 public class DocCreationTest extends WebDriverSettings {
     @Test
     public void docCreation() {
-        loginPage.inputLogin(ConfProperties.getProperty("login"));
-        loginPage.inputPasswd(ConfProperties.getProperty("password"));
-        loginPage.clickLoginBtn();
+        loginPage.Auth();
         documentsPage.newDoc();
         docCreationPage.onPage();
         docCreationPage.gkField(ConfProperties.getProperty("gk"));

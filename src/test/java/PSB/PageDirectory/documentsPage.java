@@ -40,6 +40,10 @@ public class documentsPage {
     /**
      * метод для получения имени пользователя из меню пользователя
      */
+    public void setAdminTab() {
+        adminTab.click();
+    }
+
     public void onPage() {
         WebDriverWait wait = new WebDriverWait(driver, 20);
         wait.until(ExpectedConditions.visibilityOf(Title));

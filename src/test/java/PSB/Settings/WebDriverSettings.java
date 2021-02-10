@@ -1,5 +1,6 @@
 package PSB.Settings;
 
+import PSB.PageDirectory.AdminRolePage;
 import PSB.PageDirectory.LoginPage;
 import PSB.PageDirectory.docCreationPage;
 import PSB.PageDirectory.documentsPage;
@@ -16,6 +17,7 @@ public class WebDriverSettings {
     public static PSB.PageDirectory.documentsPage documentsPage;
     public static WebDriver driver;
     public static PSB.PageDirectory.docCreationPage docCreationPage;
+    public static PSB.PageDirectory.AdminRolePage adminRolePage;
 
     @Before
     public void setup() {
@@ -26,6 +28,7 @@ public class WebDriverSettings {
         loginPage = new LoginPage(driver);
         documentsPage = new documentsPage(driver);
         docCreationPage = new docCreationPage(driver);
+        adminRolePage = new AdminRolePage(driver);
         //окно разворачивается на полный экран
         driver.manage().window().maximize();
         //задержка на выполнение теста = 10 сек.

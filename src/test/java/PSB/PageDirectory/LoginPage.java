@@ -1,5 +1,6 @@
 package PSB.PageDirectory;
 
+import PSB.Settings.ConfProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -64,4 +65,10 @@ public class LoginPage {
     public void clickLoginBtn() {
         loginBtn.click();
     }
+    public void Auth () {
+      inputLogin(ConfProperties.getProperty("login"));
+      inputPasswd(ConfProperties.getProperty("password"));
+      clickLoginBtn();
+    };
 }
+
