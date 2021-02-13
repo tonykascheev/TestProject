@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class WebDriverSettings {
-    String x = System.getProperty("os.name");
+    String OS = System.getProperty("os.name");
     public static LoginPage loginPage;
     public static PSB.PageDirectory.documentsPage documentsPage;
     public static WebDriver driver;
@@ -22,8 +22,9 @@ public class WebDriverSettings {
 
     @Before
     public void setup() {
+        System.out.println(OS);
         //определение пути до драйвера и его настройка
-        if (x == "Windows 8.1") {System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriverW"));}
+        if (OS.toLowerCase().contains("win")) {System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriverW"));}
         else {System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriverU")); };
 
         //создание экземпляра драйвера
