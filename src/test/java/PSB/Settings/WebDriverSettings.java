@@ -37,12 +37,12 @@ public class WebDriverSettings {
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
-    @AfterClass
+   /* @AfterClass
     public static void tearDown() {
         documentsPage.entryMenu();
         documentsPage.userLogout();
         driver.quit();
-    }
+    }*/
 
 
 }

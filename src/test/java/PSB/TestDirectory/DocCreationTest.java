@@ -4,7 +4,10 @@ import PSB.Settings.ConfProperties;
 import PSB.Settings.WebDriverSettings;
 import org.junit.Test;
 
+import java.io.File;
+
 public class DocCreationTest extends WebDriverSettings {
+    File file = new File(ConfProperties.getProperty("filePath"));
     @Test
     public void docCreation() {
         loginPage.Auth();
@@ -16,7 +19,7 @@ public class DocCreationTest extends WebDriverSettings {
         docCreationPage.catalogField(ConfProperties.getProperty("catalog"));
         docCreationPage.shortTitle(ConfProperties.getProperty("shortT"));
         docCreationPage.classifGSGO();
-        docCreationPage.attachment(ConfProperties.getProperty("filePath"));
+        docCreationPage.attachment(file.getAbsolutePath());
         docCreationPage.name(ConfProperties.getProperty("docName"));
         docCreationPage.docGK();
         docCreationPage.enableNotifications();
