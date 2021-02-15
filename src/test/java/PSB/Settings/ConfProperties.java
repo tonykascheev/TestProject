@@ -1,20 +1,18 @@
 package PSB.Settings;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 public class ConfProperties {
     protected static FileInputStream fileInputStream;
     protected static Properties PROPERTIES;
+    static File file = new File("src/test/resources/conf.properties");
 
 
     static {
         try {
-            fileInputStream = new FileInputStream("src/test/resources/conf.properties");
+            fileInputStream = new FileInputStream(file.getAbsolutePath());
             InputStreamReader isr = new InputStreamReader(fileInputStream, StandardCharsets.UTF_8);
             BufferedReader reader = new BufferedReader(isr);
             PROPERTIES = new Properties();

@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
+import java.nio.file.Path;
 import java.util.concurrent.TimeUnit;
 
 public class WebDriverSettings {
@@ -20,12 +21,14 @@ public class WebDriverSettings {
     public static PSB.PageDirectory.docCreationPage docCreationPage;
     public static PSB.PageDirectory.AdminRolePage adminRolePage;
 
+
     @Before
     public void setup() {
         System.out.println(OS);
         //определение пути до драйвера и его настройка
         if (OS.toLowerCase().contains("win")) {System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriverW"));}
         else {System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriverU")); };
+
 
         //создание экземпляра драйвера
         driver = new ChromeDriver();
