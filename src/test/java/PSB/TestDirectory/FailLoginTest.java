@@ -3,6 +3,7 @@ package PSB.TestDirectory;
 
 import PSB.Settings.ConfProperties;
 import PSB.Settings.WebDriverSettings;
+import io.qameta.allure.Step;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,9 +11,7 @@ import org.junit.Test;
 public class FailLoginTest extends WebDriverSettings {
 
 
-    /**
-     * тестовый метод для осуществления аутентификации
-     */
+    @Step("Проверка корректности - сообщения о неправильной аутентификации")
     @Test
     public void loginTest() {
         //получение доступа к методам класса LoginPage для взаимодействия с элементами страницы

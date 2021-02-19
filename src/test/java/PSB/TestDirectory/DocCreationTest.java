@@ -9,8 +9,9 @@ import java.io.File;
 
 public class DocCreationTest extends WebDriverSettings {
     File file = new File(ConfProperties.getProperty("filePath"));
+
     @Test
-    @Step ("Проверка создания документа")
+    @Step("Проверка создания документа")
     public void docCreation() {
         loginPage.Auth();
         documentsPage.newDoc();

@@ -75,6 +75,7 @@ public class documentsPage {
         logoutBtn.click();
     }
 
+    @Step("Нажата кнопка Добавить документ")
     public void newDoc() {
         documentBtn.click();
 

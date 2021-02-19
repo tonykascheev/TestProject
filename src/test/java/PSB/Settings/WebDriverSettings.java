@@ -30,14 +30,15 @@ public class WebDriverSettings {
         if (OS.toLowerCase().contains("win")) {
             System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriverW"));
             driver = new ChromeDriver();
-        }
-        else {
+        } else {
             System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriverU"));
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
-            driver = new ChromeDriver(options); };
+            driver = new ChromeDriver(options);
+        }
+        ;
 
 
         //создание экземпляра драйвера
