@@ -36,6 +36,7 @@ public class WebDriverSettings {
             options.addArguments("--headless");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--verbose");
             driver = new ChromeDriver(options);
         }
         ;
