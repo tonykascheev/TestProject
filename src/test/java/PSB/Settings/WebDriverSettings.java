@@ -8,6 +8,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 
 import java.nio.file.Path;
@@ -26,12 +27,20 @@ public class WebDriverSettings {
     public void setup() {
         System.out.println(OS);
         //определение пути до драйвера и его настройка
-        if (OS.toLowerCase().contains("win")) {System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriverW"));}
-        else {System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriverU")); };
+        if (OS.toLowerCase().contains("win")) {
+            System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriverW"));
+            driver = new ChromeDriver();
+        }
+        else {
+            System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriverU"));
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            driver = new ChromeDriver(options); };
 
 
         //создание экземпляра драйвера
-        driver = new ChromeDriver();
         loginPage = new LoginPage(driver);
         documentsPage = new documentsPage(driver);
         docCreationPage = new docCreationPage(driver);
