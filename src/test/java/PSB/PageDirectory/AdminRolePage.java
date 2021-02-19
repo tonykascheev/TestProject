@@ -1,5 +1,6 @@
 package PSB.PageDirectory;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -92,34 +93,34 @@ public class AdminRolePage {
     @FindBy(xpath = "//button[contains(text(),'Отменить')]")
     private WebElement CancelButton;
 
-
+    @Step("Выбран раздел Администрирование/Роли")
     public void setRole() {
         RoleTab.click();
     }
-
+    @Step("Нажата кнопка Добавить роль")
     public void addRole() {
         WebDriverWait wait = new WebDriverWait(driver, 20);
         AddRole.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3[contains(text(),'Роль пользователя')]")));
 
     }
-
+    @Step("Поиск по роли")
     public void SearchRole(String SeekingRole) {
         SearchRole.sendKeys(SeekingRole);
     }
-
+    @Step("Введен код роли")
     public void setCode(String codeRole) {
         Code.sendKeys(codeRole);
     }
-
+    @Step("Введено название роли")
     public void setName(String roleTitle) {
         Name.sendKeys(roleTitle);
     }
-
+    @Step("Выбран атрибут Видимось каталога")
     public void setCatDocDicView() {
         CatDocDicView.click();
     }
-
+    @Step("Выбран атрибут Права на изменение каталога")
     public void setCatDicChange() {
         CatDicChange.click();
     }
@@ -193,11 +194,11 @@ public class AdminRolePage {
     public void setReport() {
         Report.click();
     }
-
+    @Step("Нажата кнопка Добавить роль")
     public void clickSaveButton() {
         SaveButton.click();
     }
-
+    @Step("Нажата кнопка Отмена")
     public void clickCancel() {
         CancelButton.click();
     }

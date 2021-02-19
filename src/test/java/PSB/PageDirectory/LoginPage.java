@@ -1,6 +1,8 @@
 package PSB.PageDirectory;
 
 import PSB.Settings.ConfProperties;
+import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,6 +40,8 @@ public class LoginPage {
      */
     @FindBy(xpath = "//body/div[@id='app']/div[1]/section[1]/form[1]/input[2]")
     private WebElement passwdField;
+    @FindBy(css = ".elib-notifier__message")
+    private WebElement notifierMessage;
 
     public void onPage() {
         WebDriverWait wait = new WebDriverWait(driver, 20);
@@ -65,10 +69,20 @@ public class LoginPage {
     public void clickLoginBtn() {
         loginBtn.click();
     }
-    public void Auth () {
-      inputLogin(ConfProperties.getProperty("login"));
-      inputPasswd(ConfProperties.getProperty("password"));
-      clickLoginBtn();
-    };
+
+    @Step("Авторизация выполнена")
+    public void Auth() {
+        inputLogin(ConfProperties.getProperty("login"));
+        inputPasswd(ConfProperties.getProperty("password"));
+        clickLoginBtn();
+    }
+    @Step("Проверка сообщения о неправильной авторизации")
+    public void CheckNotifMessage () {
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(notifierMessage));
+        assertEquals(notifierMessage.getText(), "Неправильно введен логин или пароль");
+    }
+
+    ;
 }
 

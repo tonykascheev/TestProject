@@ -7,7 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 
-public class LoginTest extends WebDriverSettings {
+public class FailLoginTest extends WebDriverSettings {
 
 
     /**
@@ -21,18 +21,12 @@ public class LoginTest extends WebDriverSettings {
         loginPage.onPage();
         //вводим логин
         loginPage.inputLogin(ConfProperties.getProperty("login"));
-        //нажимаем кнопку входа
-        loginPage.clickLoginBtn();
         //вводим пароль
-        loginPage.inputPasswd(ConfProperties.getProperty("password"));
+        loginPage.inputPasswd("IncorrectPassword");
         //нажимаем кнопку входа
         loginPage.clickLoginBtn();
-        //получаем отображаемый логин
-        String user = documentsPage.getUserName();
-        //и сравниваем его с логином из файла настроек
-        Assert.assertEquals(ConfProperties.getProperty("user"), user);
-        System.out.println(ConfProperties.getProperty("user"));
-        System.out.println(user);
+        //Проверяем сообщение
+        loginPage.CheckNotifMessage();
     }
 
 

@@ -19,15 +19,5 @@ public class AdminRoleTest extends WebDriverSettings {
         adminRolePage.clickSaveButton();
     }
 
-    @Test
-    public void AdminRoleEdit() {
-        loginPage.Auth();
 
-
-    }
-
-    @Test
-    public void AdminRoleDelete() {
-
-    }
 }

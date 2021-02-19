@@ -2,6 +2,7 @@ package PSB.TestDirectory;
 
 import PSB.Settings.ConfProperties;
 import PSB.Settings.WebDriverSettings;
+import io.qameta.allure.Step;
 import org.junit.Test;
 
 import java.io.File;
@@ -9,6 +10,7 @@ import java.io.File;
 public class DocCreationTest extends WebDriverSettings {
     File file = new File(ConfProperties.getProperty("filePath"));
     @Test
+    @Step ("Проверка создания документа")
     public void docCreation() {
         loginPage.Auth();
         documentsPage.newDoc();

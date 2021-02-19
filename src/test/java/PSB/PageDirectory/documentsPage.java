@@ -1,5 +1,6 @@
 package PSB.PageDirectory;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,6 +41,7 @@ public class documentsPage {
     /**
      * метод для получения имени пользователя из меню пользователя
      */
+    @Step("Выбран раздел администрирование")
     public void setAdminTab() {
         adminTab.click();
     }
