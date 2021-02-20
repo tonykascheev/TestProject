@@ -9,10 +9,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 import static org.junit.Assert.assertEquals;
 
 public class docCreationPage {
     public WebDriver driver;
+    public static WebElement[] x;
 
     public docCreationPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -115,21 +119,17 @@ public class docCreationPage {
         driver.findElement(By.xpath("//li[contains(text(),'" + ShortT + "')]")).click();
     }
 
-    @Step("Классификация документа - ГСГО")
-    public void classifGSGO() {
-        ClassifGSGO.click();
-    }
-
-    public void classifGSReg() {
-        ClassifGSReg.click();
-    }
-
-    public void classifOPKGO() {
-        ClassifOPKGO.click();
-    }
-
-    public void classifOPKReg() {
-        ClassifOPKReg.click();
+    @Step("Классификация документа - выбрана")
+    public void classification() {
+        ArrayList<WebElement> c = new ArrayList<>();
+        c.add(ClassifGSGO);
+        c.add(ClassifGSReg);
+        c.add(ClassifOPKGO);
+        c.add(ClassifOPKReg);
+        x = c.toArray(new WebElement[0]);
+        int idx = new Random().nextInt(x.length);
+        WebElement random = (x[idx]);
+        random.click();
     }
 
     @Step("Добавлено вложение")
@@ -147,13 +147,15 @@ public class docCreationPage {
         NotificationYes.click();
     }
 
-    public void docUL() {
-        DocUL.click();
-    }
-
-    @Step("Документ ГК")
-    public void docGK() {
-        DocGK.click();
+    @Step("Заполнено поле Вид документа")
+    public void typeOfDocument() {
+        ArrayList<WebElement> c = new ArrayList<>();
+        c.add(DocUL);
+        c.add(DocGK);
+        x = c.toArray(new WebElement[0]);
+        int idx = new Random().nextInt(x.length);
+        WebElement random = (x[idx]);
+        random.click();
     }
 
     @Step("Заполнено поле Период документа(год)")
@@ -168,14 +170,16 @@ public class docCreationPage {
         driver.findElement(By.xpath("//li[contains(text(),'" + quarta + "')]")).click();
     }
 
-    @Step("Атрибут Владелец документа = Документ клиента")
-    public void docClient() {
-        DocClient.click();
-    }
+    @Step("Заполнен атрибут Владелец документа")
+    public void documentOwner() {
+        ArrayList<WebElement> c = new ArrayList<>();
+        c.add(DocClient);
+        c.add(DocBank);
+        x = c.toArray(new WebElement[0]);
+        int idx = new Random().nextInt(x.length);
+        WebElement random = (x[idx]);
+        random.click();
 
-    @Step("Атрибут Владелец документа = Документ банка")
-    public void docBank() {
-        DocBank.click();
     }
 
     @Step("Выбрана дата документа")
