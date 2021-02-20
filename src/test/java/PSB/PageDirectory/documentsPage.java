@@ -31,7 +31,7 @@ public class documentsPage {
     private WebElement logoutBtn;
     @FindBy(xpath = "//button[contains(text(),'Документ')]")
     private WebElement documentBtn;
-    @FindBy(xpath = "//span[contains(text(),'Администрирование')]")
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/section[1]/nav[1]/div[2]/span[2]")
     private WebElement adminTab;
     @FindBy(xpath = "//span[contains(text(),'Документы')]")
     private WebElement documentsTab;
