@@ -13,7 +13,7 @@ public class DeleteRole {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(url, username, password);
             Statement statement = connection.createStatement();
-            //statement.executeQuery("DELETE FROM APP_ROLE_AUTHORITY WHERE ROLE_ID = 120");
+            statement.executeQuery("DELETE FROM APP_ROLE_AUTHORITY WHERE ROLE_ID = 121");
             statement.executeQuery("DELETE FROM APP_ROLE WHERE CODE LIKE '%ЭтаРольСозданаСПомощьюАвтотеста%'");
             statement.close();
 

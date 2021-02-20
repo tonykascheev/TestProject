@@ -18,7 +18,7 @@ public class AdminRolePage {
     }
 
     //
-    @FindBy(xpath = "//span[contains(text(),'Роли')]")
+    @FindBy(css = "div.elib-home-page div.elib-administration-page aside.elib-side-bar.elib-administration-page__side-bar ul.elib-side-bar__links-list > li.elib-side-bar__link:nth-child(3)")
     private WebElement RoleTab;
     @FindBy(xpath = "//button[contains(text(),'Роль')]")
     private WebElement AddRole;

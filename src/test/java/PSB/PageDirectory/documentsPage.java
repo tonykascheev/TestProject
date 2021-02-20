@@ -31,7 +31,7 @@ public class documentsPage {
     private WebElement logoutBtn;
     @FindBy(xpath = "//button[contains(text(),'Документ')]")
     private WebElement documentBtn;
-    @FindBy(xpath = "/html[1]/body[1]/div[1]/section[1]/nav[1]/div[2]/span[2]")
+    @FindBy(css = "div:nth-child(2) section.elib-user-documents-page nav.elib-navbar div.elib-navbar__list:nth-child(3) > span.elib-navbar__link:nth-child(2)")
     private WebElement adminTab;
     @FindBy(xpath = "//span[contains(text(),'Документы')]")
     private WebElement documentsTab;
@@ -43,6 +43,9 @@ public class documentsPage {
      */
     @Step("Выбран раздел администрирование")
     public void setAdminTab() {
+
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.elementToBeClickable(adminTab));
         adminTab.click();
     }
 
