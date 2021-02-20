@@ -13,6 +13,7 @@ public class AdminRoleTest extends WebDriverSettings {
     public void AdminCreationRole() {
         loginPage.Auth();
         documentsPage.onPage();
+        driver.navigate().refresh();
         documentsPage.setAdminTab();
         adminRolePage.setRole();
         adminRolePage.addRole();
