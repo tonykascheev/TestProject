@@ -44,7 +44,8 @@ public class documentsPage {
     @Step("Выбран раздел администрирование")
     public void setAdminTab() {
 
-        WebDriverWait wait = new WebDriverWait(driver,10);
+        WebDriverWait wait = new WebDriverWait(driver,15);
+        wait.until(ExpectedConditions.visibilityOf(adminTab));
         wait.until(ExpectedConditions.elementToBeClickable(adminTab));
         adminTab.click();
     }
