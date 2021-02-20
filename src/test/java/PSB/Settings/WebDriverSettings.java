@@ -49,6 +49,7 @@ public class WebDriverSettings {
         adminRolePage = new AdminRolePage(driver);
         //окно разворачивается на полный экран
         driver.manage().window().maximize();
+        System.out.println(driver.manage().window().getSize());
         //задержка на выполнение теста = 10 сек.
         driver.manage().timeouts().implicitlyWait(18, TimeUnit.SECONDS);
         //получение ссылки на страницу входа из файла настроек

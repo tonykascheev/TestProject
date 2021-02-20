@@ -14,7 +14,6 @@ public class AdminRoleTest extends WebDriverSettings {
     public void AdminCreationRole() {
         loginPage.Auth();
         documentsPage.onPage();
-        driver.findElement(By.xpath("//body/div[@id='app']/section[1]/nav[1]/section[1]/section[1]")).click();
         documentsPage.setAdminTab();
         adminRolePage.setRole();
         adminRolePage.addRole();
