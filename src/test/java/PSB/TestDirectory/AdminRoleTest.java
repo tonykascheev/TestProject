@@ -1,18 +1,15 @@
 package PSB.TestDirectory;
 
-import PSB.PageDirectory.AdminRolePage;
 import PSB.Settings.ConfProperties;
 import PSB.Settings.WebDriverSettings;
 import io.qameta.allure.Step;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.FindBy;
 
 public class AdminRoleTest extends WebDriverSettings {
     @Step("Проверка создания новой роли")
     @Test
-    public void AdminCreationRole() {
-        loginPage.Auth();
+    public void createUserRole() {
+        loginPage.auth();
         documentsPage.onPage();
         documentsPage.setAdminTab();
         adminRolePage.setRole();

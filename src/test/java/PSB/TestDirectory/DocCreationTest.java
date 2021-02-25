@@ -15,7 +15,7 @@ public class DocCreationTest extends WebDriverSettings {
     @Test
     @Step("Проверка создания документа")
     public void docCreation() throws IOException {
-        loginPage.Auth();
+        loginPage.auth();
         documentsPage.newDoc();
         docCreationPage.onPage();
         docCreationPage.gkField(Randomizer.randomizer(ConfProperties.getProperty("gk")));

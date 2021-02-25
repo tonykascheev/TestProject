@@ -19,196 +19,196 @@ public class AdminRolePage {
 
     //
     @FindBy(css = "div.elib-home-page div.elib-administration-page aside.elib-side-bar.elib-administration-page__side-bar ul.elib-side-bar__links-list > li.elib-side-bar__link:nth-child(3)")
-    private WebElement RoleTab;
+    private WebElement roleTab;
     @FindBy(xpath = "//button[contains(text(),'Роль')]")
-    private WebElement AddRole;
+    private WebElement addRole;
 
     @FindBy(xpath = "//header/section[1]/input[1]")
-    private WebElement SearchRole;
+    private WebElement searchRole;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[1]/div[1]/input[1]")
-    private WebElement Code;
+    private WebElement code;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[2]/section[1]/div[1]/input[1]")
-    private WebElement Name;
+    private WebElement name;
 
 
     //Каталог документов
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[1]/section[2]/label[1]/span[1]")
-    private WebElement CatDocDicView;
+    private WebElement catDocDicView;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[1]/section[3]/label[1]/span[1]")
-    private WebElement CatDicChange;
+    private WebElement catDicChange;
     //Атрибуты документа
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[2]/section[2]/label[1]/span[1]")
-    private WebElement AtrDocDicView;
+    private WebElement atrDocDicView;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[2]/section[3]/label[1]/span[1]")
-    private WebElement AtrDicChange;
+    private WebElement atrDicChange;
     //Users
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[3]/section[2]/label[1]/span[1]")
-    private WebElement UsersDicView;
+    private WebElement usersDicView;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[3]/section[3]/label[1]/span[1]")
-    private WebElement UsersChange;
+    private WebElement usersChange;
     //Roles
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[4]/section[2]/label[1]/span[1]")
-    private WebElement RoleDicView;
+    private WebElement roleDicView;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[4]/section[3]/label[1]/span[1]")
-    private WebElement RoleChange;
+    private WebElement roleChange;
     //Просмотр Документов
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[5]/section[2]/label[1]/span[1]")
-    private WebElement ArchiveDocView;
+    private WebElement archiveDocView;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[5]/section[3]/label[1]/span[1]")
-    private WebElement GSGODocView;
+    private WebElement gsgoDocView;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[5]/section[4]/label[1]/span[1]")
-    private WebElement GSRegDocView;
+    private WebElement gsregDocView;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[5]/section[5]/label[1]/span[1]")
-    private WebElement OPKGODocView;
+    private WebElement opkgoDocView;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[5]/section[6]/label[1]/span[1]")
-    private WebElement OPKREGDocView;
+    private WebElement opkregDocView;
     //Dashboard
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[6]/section[2]/label[1]/span[1]")
-    private WebElement SearchDoc;
+    private WebElement searchDoc;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[6]/section[3]/label[1]/span[1]")
-    private WebElement CreateDoc;
+    private WebElement createDoc;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[6]/section[4]/label[1]/span[1]")
-    private WebElement VerView;
+    private WebElement verView;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[6]/section[5]/label[1]/span[1]")
-    private WebElement DocDownload;
+    private WebElement docDownload;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[6]/section[6]/label[1]/span[1]")
-    private WebElement DocCardView;
+    private WebElement docCardView;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[6]/section[7]/label[1]/span[1]")
-    private WebElement CopyAs;
+    private WebElement copyAs;
     //Карточка документа
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[7]/section[2]/label[1]/span[1]")
-    private WebElement DocCardEdit;
+    private WebElement docCardEdit;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[7]/section[3]/label[1]/span[1]")
-    private WebElement DocCardDownload;
+    private WebElement docCardDownload;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[7]/section[4]/label[1]/span[1]")
-    private WebElement DocCardParent;
+    private WebElement docCardParent;
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[7]/section[5]/label[1]/span[1]")
-    private WebElement DocCardSubsidiary;
+    private WebElement docCardSubsidiary;
     //Отчёты
     @FindBy(xpath = "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/section[1]/form[1]/section[3]/section[8]/section[2]/label[1]/span[1]")
-    private WebElement Report;
+    private WebElement report;
     //Кнопки
     @FindBy(xpath = "//button[contains(text(),'Сохранить')]")
-    private WebElement SaveButton;
+    private WebElement saveButton;
     @FindBy(xpath = "//button[contains(text(),'Отменить')]")
-    private WebElement CancelButton;
+    private WebElement cancelButton;
 
     @Step("Выбран раздел Администрирование/Роли")
     public void setRole() {
-        RoleTab.click();
+        roleTab.click();
     }
 
     @Step("Нажата кнопка Добавить роль")
     public void addRole() {
         WebDriverWait wait = new WebDriverWait(driver, 20);
-        AddRole.click();
+        addRole.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3[contains(text(),'Роль пользователя')]")));
 
     }
 
     @Step("Поиск по роли")
-    public void SearchRole(String SeekingRole) {
-        SearchRole.sendKeys(SeekingRole);
+    public void searchRole(String SeekingRole) {
+        searchRole.sendKeys(SeekingRole);
     }
 
     @Step("Введен код роли")
     public void setCode(String codeRole) {
-        Code.sendKeys(codeRole);
+        code.sendKeys(codeRole);
     }
 
     @Step("Введено название роли")
     public void setName(String roleTitle) {
-        Name.sendKeys(roleTitle);
+        name.sendKeys(roleTitle);
     }
 
     @Step("Выбран атрибут Видимось каталога")
     public void setCatDocDicView() {
-        CatDocDicView.click();
+        catDocDicView.click();
     }
 
     @Step("Выбран атрибут Права на изменение каталога")
     public void setCatDicChange() {
-        CatDicChange.click();
+        catDicChange.click();
     }
 
     public void setAtrDocDicView() {
-        AtrDocDicView.click();
+        atrDocDicView.click();
     }
 
     public void setArtDicChange() {
-        AtrDicChange.click();
+        atrDicChange.click();
     }
 
     public void setUsersDicView() {
-        UsersDicView.click();
+        usersDicView.click();
     }
 
     public void setUsersChange() {
-        UsersChange.click();
+        usersChange.click();
     }
 
     public void setRoleDicView() {
-        RoleDicView.click();
+        roleDicView.click();
     }
 
     public void setRoleChange() {
-        RoleChange.click();
+        roleChange.click();
     }
 
 
     public void setSearchDoc() {
-        SearchDoc.click();
+        searchDoc.click();
     }
 
     public void setCreateDoc() {
-        CreateDoc.click();
+        createDoc.click();
     }
 
     public void setVerView() {
-        VerView.click();
+        verView.click();
     }
 
     public void setDocDownload() {
-        DocDownload.click();
+        docDownload.click();
     }
 
     public void setDocCardView() {
-        DocCardView.click();
+        docCardView.click();
     }
 
     public void setCopyAs() {
-        CopyAs.click();
+        copyAs.click();
     }
 
 
     public void setDocCardEdit() {
-        DocCardEdit.click();
+        docCardEdit.click();
     }
 
     public void setDocCardDownload() {
-        GSRegDocView.click();
+        gsregDocView.click();
     }
 
     public void setDocCardParent() {
-        DocCardParent.click();
+        docCardParent.click();
     }
 
     public void setDocCardSubsidiary() {
-        DocCardSubsidiary.click();
+        docCardSubsidiary.click();
     }
 
     public void setReport() {
-        Report.click();
+        report.click();
     }
 
     @Step("Нажата кнопка Добавить роль")
     public void clickSaveButton() {
-        SaveButton.click();
+        saveButton.click();
     }
 
     @Step("Нажата кнопка Отмена")
     public void clickCancel() {
-        CancelButton.click();
+        cancelButton.click();
     }
 
 

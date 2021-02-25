@@ -71,14 +71,14 @@ public class LoginPage {
     }
 
     @Step("Авторизация выполнена")
-    public void Auth() {
+    public void auth() {
         inputLogin(ConfProperties.getProperty("login"));
         inputPasswd(ConfProperties.getProperty("password"));
         clickLoginBtn();
     }
 
     @Step("Проверка сообщения о неправильной авторизации")
-    public void CheckNotifMessage() {
+    public void checkNotifMessage() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(notifierMessage));
         assertEquals(notifierMessage.getText(), "Неправильно введен логин или пароль");

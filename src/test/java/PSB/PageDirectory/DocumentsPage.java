@@ -11,10 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.assertEquals;
 
-public class documentsPage {
+public class DocumentsPage {
     public WebDriver driver;
 
-    public documentsPage(WebDriver driver) {
+    public DocumentsPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
@@ -26,7 +26,7 @@ public class documentsPage {
      * определение локатора кнопки выхода из аккаунта
      */
     @FindBy(xpath = "//h5[contains(text(),'Электронное досье')]")
-    private WebElement Title;
+    private WebElement title;
     @FindBy(xpath = "//span[contains(text(),'Выйти')]")
     private WebElement logoutBtn;
     @FindBy(xpath = "//button[contains(text(),'Документ')]")
@@ -44,7 +44,7 @@ public class documentsPage {
     @Step("Выбран раздел администрирование")
     public void setAdminTab() {
 
-        WebDriverWait wait = new WebDriverWait(driver,15);
+        WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.visibilityOf(adminTab));
         wait.until(ExpectedConditions.elementToBeClickable(adminTab));
         adminTab.click();
@@ -52,8 +52,8 @@ public class documentsPage {
 
     public void onPage() {
         WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.visibilityOf(Title));
-        assertEquals(Title.getText(), "Электронное досье");
+        wait.until(ExpectedConditions.visibilityOf(title));
+        assertEquals(title.getText(), "Электронное досье");
     }
 
 

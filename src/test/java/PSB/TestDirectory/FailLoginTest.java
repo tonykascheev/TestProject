@@ -4,7 +4,6 @@ package PSB.TestDirectory;
 import PSB.Settings.ConfProperties;
 import PSB.Settings.WebDriverSettings;
 import io.qameta.allure.Step;
-import org.junit.Assert;
 import org.junit.Test;
 
 
@@ -25,7 +24,7 @@ public class FailLoginTest extends WebDriverSettings {
         //нажимаем кнопку входа
         loginPage.clickLoginBtn();
         //Проверяем сообщение
-        loginPage.CheckNotifMessage();
+        loginPage.checkNotifMessage();
     }
 
 

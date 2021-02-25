@@ -2,8 +2,8 @@ package PSB.Settings;
 
 import PSB.PageDirectory.AdminRolePage;
 import PSB.PageDirectory.LoginPage;
-import PSB.PageDirectory.docCreationPage;
-import PSB.PageDirectory.documentsPage;
+import PSB.PageDirectory.DocCreationPage;
+import PSB.PageDirectory.DocumentsPage;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -11,15 +11,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 
-import java.nio.file.Path;
 import java.util.concurrent.TimeUnit;
 
 public class WebDriverSettings {
     String OS = System.getProperty("os.name");
     public static LoginPage loginPage;
-    public static PSB.PageDirectory.documentsPage documentsPage;
+    public static DocumentsPage documentsPage;
     public static WebDriver driver;
-    public static PSB.PageDirectory.docCreationPage docCreationPage;
+    public static DocCreationPage docCreationPage;
     public static PSB.PageDirectory.AdminRolePage adminRolePage;
 
 
@@ -44,8 +43,8 @@ public class WebDriverSettings {
 
         //создание экземпляра драйвера
         loginPage = new LoginPage(driver);
-        documentsPage = new documentsPage(driver);
-        docCreationPage = new docCreationPage(driver);
+        documentsPage = new DocumentsPage(driver);
+        docCreationPage = new DocCreationPage(driver);
         adminRolePage = new AdminRolePage(driver);
         //окно разворачивается на полный экран
         driver.manage().window().maximize();
